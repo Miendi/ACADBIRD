@@ -1,0 +1,298 @@
+/* =======================
+   Base Styles
+======================= */
+html {
+height: 100%;
+}
+
+body {
+height: 100%;
+width: 100%;
+font-family: "Poppins", Arial, sans-serif;
+background-color: #dbe7f7; /* light blue background */
+margin: 0;
+font-size: 16px;
+color: #000;
+}
+
+/* =======================
+   Main Content
+======================= */
+.main-content {
+padding: 35px 45px;
+background-color: transparent;
+position: relative;
+z-index: 0;
+overflow: auto;
+height: calc(100vh - 100px); /* This calculation should be correct if the fixed headers are 90px total */
+display: flex;
+justify-content: flex-end;
+align-items: flex-start;
+}
+
+/* =======================
+   Navbar
+======================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    background-color: #0a3b82; /* sample dark blue */
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+   
+    width: 70px;
+    height: 40px;
+
+}
+
+.logo-text-img {
+    height: 28px; /* adjust to match your design */
+}
+
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.nav-icons .icon {
+     width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.account-menu {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.account-menu .dropdown-icon {
+    width: 12px;
+    height: 14px;
+    cursor: pointer;
+}
+
+
+/* =======================
+   Secondary Header (Navigation)
+======================= */
+.secondary-header {
+    background-color: #e7efff;
+    display: flex;
+    justify-content: center;
+    padding: 12px 30px;
+    position: sticky;
+    top: 44px;
+    z-index: 999;
+    border-bottom: 1px solid #c9d7f8;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 22px;
+    align-items: center;
+    font-size: 16px;
+}
+
+.nav-item {
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+.nav-item.active {
+    font-weight: 700;
+    color: #000;
+    border-bottom: 2px solid #000;
+}
+
+.nav-item:hover {
+    background-color: #c9d7f8;
+}
+
+/* =======================
+   Separator Line
+======================= */
+.separator {
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+    margin: 0;
+}
+
+/* =======================
+   Main Content
+======================= */
+.main-content {
+    padding: 35px 45px;
+    background-color: transparent;
+    position: relative;
+    z-index: 0;
+    overflow: auto;
+    height: calc(100vh - 100px);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+/* New styles for the Add Student button */
+.add-student-container {
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #c9d7f8;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    margin-left: auto;
+}
+
+.add-student-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #0a3b82;
+    background-color: #fff;
+    border: 1px solid #c9d7f8;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.add-student-button:hover {
+    background-color: #f0f4ff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.add-icon {
+    font-size: 20px;
+    color: #0a3b82;
+}
+
+/* =======================
+   Modal Styles
+======================= */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 450px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.modal-header h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.close-modal {
+    font-size: 24px;
+    cursor: pointer;
+    color: #999;
+    transition: color 0.3s;
+}
+
+.close-modal:hover {
+    color: #555;
+}
+
+.modal-body {
+    margin-bottom: 20px;
+}
+
+.modal-input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.modal-input-group label {
+    font-size: 16px;
+    font-weight: 500;
+    width: 80px;
+}
+
+.modal-input-group input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #c9d7f8;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.modal-input-group input:focus {
+    outline: none;
+    border-color: #0a3b82;
+    box-shadow: 0 0 0 2px rgba(10, 59, 130, 0.2);
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.modal-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-button {
+    background-color: #ffc107;
+    color: #000;
+}
+
+.cancel-button {
+    background-color: #d4edda;
+    color: #000;
+}
+
+.add-button:hover {
+    background-color: #ffb300;
+}
+
+.cancel-button:hover {
+    background-color: #c3e6cb;
+}
